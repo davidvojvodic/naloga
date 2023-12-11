@@ -67,7 +67,7 @@ const Navbar = () => {
       <div className="flex h-16 items-center px-4 gap-10">
         <Link to={"/"} className="group flex items-center gap-3">
           <img
-            src="public/name-picker-wheel.webp"
+            src="/name-picker-wheel.webp"
             alt="Logo"
             width={50}
             height={50}
@@ -96,7 +96,7 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-2 justify-center p-2  outline-none">
                 <Avatar>
-                  <AvatarImage src="public/avatar.png" />
+                  <AvatarImage src="/avatar.png" />
                 </Avatar>
                 <p className="font-bold">{user.name}</p>
               </DropdownMenuTrigger>

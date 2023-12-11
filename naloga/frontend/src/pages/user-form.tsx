@@ -18,6 +18,7 @@ import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
+import { motion } from "framer-motion";
 
 // Shema obrazca za validacijo
 const formSchema = z.object({
@@ -132,7 +133,14 @@ const UserForm = () => {
       </div>
       {!loading && (
         <div className="flex items-center justify-center">
-          <div className="border p-12 w-[550px] rounded-lg">
+          <motion.div
+            initial={{ opacity: 0, y: -200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+            }}
+            className="border p-12 w-[550px] rounded-lg"
+          >
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -190,7 +198,7 @@ const UserForm = () => {
                 </Button>
               </form>
             </Form>
-          </div>
+          </motion.div>
         </div>
       )}
     </>

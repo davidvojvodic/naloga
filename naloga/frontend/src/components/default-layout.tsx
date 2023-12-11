@@ -9,11 +9,24 @@ import { Outlet } from "react-router-dom";
 
 // Uvoz komponente Navbar
 import Navbar from "./navbar";
+import { useState, useEffect } from "react";
 
 // Komponenta za privzeti postavitev (Default Layout)
 const DefaultLayout = () => {
   // Pridobitev stanja žetona (token) iz konteksta
   const { token } = useStateContext();
+  // Stanje za sledenje, ali je komponenta nameščena
+  const [isMounted, setIsMounted] = useState(false);
+
+  // useEffect za nastavitev stanja isMounted na true ob namestitvi komponente
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Če komponenta ni nameščena, vrni null (ne prikaži ničesar)
+  if (!isMounted) {
+    return null;
+  }
 
   // Če uporabnik ni prijavljen, ga preusmeri na stran za prijavo
   if (!token) {
