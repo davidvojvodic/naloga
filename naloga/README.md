@@ -4,9 +4,9 @@ Ta projekt je spletna aplikacija z Laravel backendom in Vite frontendom. Značil
 
 ## Značilnosti
 
-- Uporabniška Avtentikacija: stran je zavarovana in ima prijavo ter registracijo.
-- Nadzorna plošča za upravljanje uporabnikov: Pregled in upravljanje uporabnikov. Funkcionalnosti vključujejo izbiro naključnega uporabnika in shranjevanje te izbire v tabelo selectedUser.
-- Stran Uporabnikov: Prikaz uporabnikov iz tabele user. Dodajanje, urejanje ali brisanje uporabnikov.
+- Uporabniška Avtentikacija: stran je zavarovana in ima prijavo ter registracijo, kjer podatke shrani v User tabelo.
+- Nadzorna plošča za upravljanje uporabnikov: Pregled in upravljanje uporabnikov. Funkcionalnosti vključujejo izbiro naključnega uporabnika in shranjevanje te izbire v tabelo SelectedUser.
+- Stran Uporabnikov: Prikaz uporabnikov iz tabele User. Dodajanje, urejanje ali brisanje uporabnikov.
 - Obdelava obrazcev: strani za ustvarjanje in urejanje podrobnosti uporabnika s pomočjo Zod validacije.
 - Integracija API-ja: Klici API-ja v ozadju z uporabo Axios.
 - Dizajn: Izdelan s Tailwind CSS ter Shadcn.
